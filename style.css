@@ -1,0 +1,254 @@
+@font-face {
+  font-family: 'Outfit';
+  src: url('./fonts/outfit/Outfit-Regular.ttf') format('truetype'),
+    url('./fonts/outfit/Outfit-SemiBold.ttf') format('truetype'),
+    url('./fonts/outfit/Outfit-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Young Serif';
+  src: url('./fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+}
+
+:root {
+  --nutmeng-color: #854632;
+  --dark-raspberyy-color: #7b284f;
+  --rose-white-color: #fff5fa;
+  --eggshell-color: #f3e5d8;
+  --right-grey-color: #e4ded8;
+  --wenge-brown-color: #5f574e;
+  --dark-charcoal-color: #302d2c;
+  --young-serif-font: 'Young Serif', serif;
+  --outfit-font: 'Outfit', sans-serif;
+  font-family: var(--outfit-font);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--wenge-brown-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+.list-8px-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.h2 {
+  font-family: var(--young-serif-font);
+  font-size: 28px;
+  line-height: 1.2;
+  color: var(--nutmeng-color);
+}
+
+.thumbnail {
+  display: block;
+  width: 100%;
+}
+
+.inner-wrapper {
+  padding: 40px 32px;
+}
+
+.heading {
+  font-family: var(--young-serif-font);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1;
+  color: var(--dark-charcoal-color);
+}
+
+.desc {
+  margin-top: 25px;
+}
+
+.preparation-time {
+  margin-top: 30px;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: var(--rose-white-color);
+}
+
+.preparation-time__title {
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--dark-raspberyy-color);
+}
+
+.preparation-time__list {
+  margin-top: 14px;
+}
+
+.preparation-time__list li {
+  position: relative;
+  padding-left: 40px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.preparation-time__list li::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 99px;
+  background-color: var(--dark-raspberyy-color);
+}
+
+.preparation-time__list li span {
+  font-weight: 700;
+}
+
+.ingredients {
+  margin-top: 30px;
+}
+
+.ingredients__list {
+  margin-top: 21px;
+}
+
+.ingredients__list li {
+  position: relative;
+  padding-left: 40px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.ingredients__list li::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 99px;
+  background-color: var(--nutmeng-color);
+}
+
+.divider {
+  margin-top: 30px;
+  border: none;
+  border-top: 1px solid var(--right-grey-color);
+}
+
+.instructions {
+  margin-top: 30px;
+}
+
+.instructions__list {
+  margin-top: 21px;
+  padding-left: 8px;
+}
+
+.instructions__list li {
+  position: relative;
+  padding-left: 32px;
+  font-size: 16px;
+  line-height: 1.5;
+  counter-increment: step-counter;
+}
+
+.instructions__list li::before {
+  position: absolute;
+  content: counter(step-counter) '.';
+  font-family: var(--outfit-font);
+  font-weight: bold;
+  top: 0;
+  left: 0;
+  color: var(--nutmeng-color);
+}
+
+.instructions__list li span {
+  font-weight: 700;
+}
+
+.nutrition {
+  margin-top: 30px;
+}
+
+.nutrition__table-title {
+  margin-top: 22px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.nutrition__table {
+  width: 100%;
+  margin-top: 12px;
+  border-collapse: collapse;
+}
+
+.nutrition__table tr:not(:last-child) {
+  box-shadow: 0 -1px inset var(--right-grey-color);
+}
+
+.nutrition__tabled td {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.nutrition__table td:first-child {
+  padding: 12px 8px 12px 32px;
+}
+
+.nutrition__table td:last-child {
+  padding: 12px 32px 12px 8px;
+  font-weight: bold;
+  color: var(--nutmeng-color);
+}
+
+@media all and (min-width: 600px) {
+  body {
+    display: flex;
+    justify-content: center;
+    background-color: var(--eggshell-color);
+  }
+
+  main {
+    padding: 122px 40px;
+  }
+
+  .wrapper {
+    max-width: 736px;
+    padding: 40px;
+    border-radius: 16px;
+    background-color: white;
+  }
+
+  .inner-wrapper {
+    padding: 0;
+  }
+
+  .thumbnail {
+    border-radius: 8px;
+  }
+
+  .heading {
+    margin-top: 30px;
+    font-size: 40px;
+    line-height: 1.5;
+  }
+
+  .desc {
+    margin-top: 14px;
+  }
+
+  .preparation-time {
+    padding: 28px;
+  }
+}
