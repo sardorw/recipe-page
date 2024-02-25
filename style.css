@@ -47,6 +47,7 @@ ol {
 
 .h2 {
   font-family: var(--young-serif-font);
+  font-weight: 400;
   font-size: 28px;
   line-height: 1.2;
   color: var(--nutmeng-color);
@@ -235,7 +236,7 @@ ol {
   }
 
   .thumbnail {
-    border-radius: 8px;
+    border-radius: 12px;
   }
 
   .heading {
